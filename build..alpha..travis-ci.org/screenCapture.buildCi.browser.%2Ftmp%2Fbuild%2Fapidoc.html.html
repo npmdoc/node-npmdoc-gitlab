@@ -1,0 +1,1094 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/node-gitlab/node-gitlab#readme">gitlab (v1.7.1)</a>
+</h1>
+<h4>GitLab API Nodejs library.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitlab">module gitlab</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.gitlab">
+            function <span class="apidocSignatureSpan"></span>gitlab
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3">
+            function <span class="apidocSignatureSpan">gitlab.</span>ApiV3
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.BaseModel">
+            function <span class="apidocSignatureSpan">gitlab.</span>BaseModel
+            <span class="apidocSignatureSpan">(client)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.Utils">
+            function <span class="apidocSignatureSpan">gitlab.</span>Utils
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitlab.</span>ApiBase</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitlab.</span>ApiBaseHTTP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitlab.</span>ApiV3.__super__</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitlab.</span>ApiV3.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitlab.</span>BaseModel.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitlab.ApiBase">module gitlab.ApiBase</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiBase.ApiBase">
+            function <span class="apidocSignatureSpan">gitlab.</span>ApiBase
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitlab.ApiBaseHTTP">module gitlab.ApiBaseHTTP</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiBaseHTTP.ApiBaseHTTP">
+            function <span class="apidocSignatureSpan">gitlab.</span>ApiBaseHTTP
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitlab.ApiV3">module gitlab.ApiV3</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.ApiV3">
+            function <span class="apidocSignatureSpan">gitlab.</span>ApiV3
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gitlab.ApiV3.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitlab.ApiV3.__super__">module gitlab.ApiV3.__super__</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.__super__.constructor">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.__super__.delete">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>delete
+            <span class="apidocSignatureSpan">(path, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.__super__.fn_wrapper">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>fn_wrapper
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.__super__.get">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>get
+            <span class="apidocSignatureSpan">(path, query, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.__super__.handleOptions">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>handleOptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.__super__.init">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.__super__.patch">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>patch
+            <span class="apidocSignatureSpan">(path, data, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.__super__.post">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>post
+            <span class="apidocSignatureSpan">(path, data, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.__super__.prepare_opts">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>prepare_opts
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.__super__.put">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>put
+            <span class="apidocSignatureSpan">(path, data, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitlab.ApiV3.prototype">module gitlab.ApiV3.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.prototype.constructor">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.ApiV3.prototype.handleOptions">
+            function <span class="apidocSignatureSpan">gitlab.ApiV3.prototype.</span>handleOptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitlab.BaseModel">module gitlab.BaseModel</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.BaseModel.BaseModel">
+            function <span class="apidocSignatureSpan">gitlab.</span>BaseModel
+            <span class="apidocSignatureSpan">(client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitlab.BaseModel.prototype">module gitlab.BaseModel.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.BaseModel.prototype._init">
+            function <span class="apidocSignatureSpan">gitlab.BaseModel.prototype.</span>_init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.BaseModel.prototype.load">
+            function <span class="apidocSignatureSpan">gitlab.BaseModel.prototype.</span>load
+            <span class="apidocSignatureSpan">(model)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitlab.Utils">module gitlab.Utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.Utils.Utils">
+            function <span class="apidocSignatureSpan">gitlab.</span>Utils
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitlab.Utils.parseProjectId">
+            function <span class="apidocSignatureSpan">gitlab.Utils.</span>parseProjectId
+            <span class="apidocSignatureSpan">(projectId)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitlab" id="apidoc.module.gitlab">module gitlab</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.gitlab" id="apidoc.element.gitlab.gitlab">
+        function <span class="apidocSignatureSpan"></span>gitlab
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gitlab = function (options) {
+  return new ApiV3(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3" id="apidoc.element.gitlab.ApiV3">
+        function <span class="apidocSignatureSpan">gitlab.</span>ApiV3
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApiV3() {
+  this.handleOptions = bind(this.handleOptions, this);
+  return ApiV3.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.BaseModel" id="apidoc.element.gitlab.BaseModel">
+        function <span class="apidocSignatureSpan">gitlab.</span>BaseModel
+        <span class="apidocSignatureSpan">(client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function exports(client) {
+  this.client = client;
+  this._init = bind(this._init, this);
+  this.load = bind(this.load, this);
+  this._init();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.Utils" id="apidoc.element.gitlab.Utils">
+        function <span class="apidocSignatureSpan">gitlab.</span>Utils
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Utils() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitlab.ApiBase" id="apidoc.module.gitlab.ApiBase">module gitlab.ApiBase</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiBase.ApiBase" id="apidoc.element.gitlab.ApiBase.ApiBase">
+        function <span class="apidocSignatureSpan">gitlab.</span>ApiBase
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApiBase(options) {
+  this.options = options;
+  this.init = bind(this.init, this);
+  this.handleOptions = bind(this.handleOptions, this);
+  this.handleOptions();
+  this.init();
+  debug("constructor()");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitlab.ApiBaseHTTP" id="apidoc.module.gitlab.ApiBaseHTTP">module gitlab.ApiBaseHTTP</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiBaseHTTP.ApiBaseHTTP" id="apidoc.element.gitlab.ApiBaseHTTP.ApiBaseHTTP">
+        function <span class="apidocSignatureSpan">gitlab.</span>ApiBaseHTTP
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApiBaseHTTP() {
+  this.patch = bind(this.patch, this);
+  this.put = bind(this.put, this);
+  this.post = bind(this.post, this);
+  this["delete"] = bind(this["delete"], this);
+  this.get = bind(this.get, this);
+  this.fn_wrapper = bind(this.fn_wrapper, this);
+  this.prepare_opts = bind(this.prepare_opts, this);
+  this.init = bind(this.init, this);
+  this.handleOptions = bind(this.handleOptions, this);
+  return ApiBaseHTTP.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitlab.ApiV3" id="apidoc.module.gitlab.ApiV3">module gitlab.ApiV3</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.ApiV3" id="apidoc.element.gitlab.ApiV3.ApiV3">
+        function <span class="apidocSignatureSpan">gitlab.</span>ApiV3
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApiV3() {
+  this.handleOptions = bind(this.handleOptions, this);
+  return ApiV3.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitlab.ApiV3.__super__" id="apidoc.module.gitlab.ApiV3.__super__">module gitlab.ApiV3.__super__</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.__super__.constructor" id="apidoc.element.gitlab.ApiV3.__super__.constructor">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApiBaseHTTP() {
+  this.patch = bind(this.patch, this);
+  this.put = bind(this.put, this);
+  this.post = bind(this.post, this);
+  this["delete"] = bind(this["delete"], this);
+  this.get = bind(this.get, this);
+  this.fn_wrapper = bind(this.fn_wrapper, this);
+  this.prepare_opts = bind(this.prepare_opts, this);
+  this.init = bind(this.init, this);
+  this.handleOptions = bind(this.handleOptions, this);
+  return ApiBaseHTTP.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.__super__.delete" id="apidoc.element.gitlab.ApiV3.__super__.delete">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>delete
+        <span class="apidocSignatureSpan">(path, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (path, fn) {
+  var opts;
+  if (fn == null) {
+    fn = null;
+  }
+  opts = this.prepare_opts({});
+  return this.slumber(path)["delete"](opts, this.fn_wrapper(fn));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.__super__.fn_wrapper" id="apidoc.element.gitlab.ApiV3.__super__.fn_wrapper">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>fn_wrapper
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fn_wrapper = function (fn) {
+  return (function(_this) {
+    return function(err, response, ret) {
+      var arity;
+      arity = fn.length;
+      switch (arity) {
+        case 1:
+          return fn(ret);
+        case 2:
+          return fn(err, ret || JSON.parse(response.body).message);
+        case 3:
+          return fn(err, response, ret);
+      }
+    };
+  })(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    fn = null;
+  }
+  if ('function' === typeof query) {
+    fn = query;
+    query = {};
+  }
+  opts = this.prepare_opts(query);
+  return this.slumber(path).get(opts, this.<span class="apidocCodeKeywordSpan">fn_wrapper</span>(fn));
+};
+
+ApiBaseHTTP.prototype["delete"] = function(path, fn) {
+  var opts;
+  if (fn == null) {
+    fn = null;
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.__super__.get" id="apidoc.element.gitlab.ApiV3.__super__.get">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>get
+        <span class="apidocSignatureSpan">(path, query, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (path, query, fn) {
+  var opts;
+  if (query == null) {
+    query = {};
+  }
+  if (fn == null) {
+    fn = null;
+  }
+  if ('function' === typeof query) {
+    fn = query;
+    query = {};
+  }
+  opts = this.prepare_opts(query);
+  return this.slumber(path).get(opts, this.fn_wrapper(fn));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    fn = null;
+  }
+  if ('function' === typeof query) {
+    fn = query;
+    query = {};
+  }
+  opts = this.prepare_opts(query);
+  return this.slumber(path).<span class="apidocCodeKeywordSpan">get</span>(opts, this.fn_wrapper(fn));
+};
+
+ApiBaseHTTP.prototype["delete"] = function(path, fn) {
+  var opts;
+  if (fn == null) {
+    fn = null;
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.__super__.handleOptions" id="apidoc.element.gitlab.ApiV3.__super__.handleOptions">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>handleOptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handleOptions = function () {
+  var base, base1, base2;
+  ApiBaseHTTP.__super__.handleOptions.apply(this, arguments);
+  if ((base = this.options).base_url == null) {
+    base.base_url = '';
+  }
+  if (!this.options.url) {
+    throw "`url` is mandatory";
+  }
+  if (!(this.options.token || this.options.oauth_token)) {
+    throw "`private_token` or `oauth_token` is mandatory";
+  }
+  if ((base1 = this.options).slumber == null) {
+    base1.slumber = {};
+  }
+  if ((base2 = this.options.slumber).append_slash == null) {
+    base2.append_slash = false;
+  }
+  this.options.url = this.options.url.replace(/\/api\/v3/, '');
+  if (this.options.auth != null) {
+    this.options.slumber.auth = this.options.auth;
+  }
+  return debug("handleOptions()");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  debug = require('debug')('gitlab:ApiBase');
+
+  module.exports.ApiBase = (function() {
+function ApiBase(options) {
+  this.options = options;
+  this.init = bind(this.init, this);
+  this.handleOptions = bind(this.handleOptions, this);
+  this.<span class="apidocCodeKeywordSpan">handleOptions</span>();
+  this.init();
+  debug("constructor()");
+}
+
+ApiBase.prototype.handleOptions = function() {
+  var base;
+  if ((base = this.options).verbose == null) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.__super__.init" id="apidoc.element.gitlab.ApiV3.__super__.init">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  var api;
+  ApiBaseHTTP.__super__.init.apply(this, arguments);
+  api = slumber.API(this.options.url, this.options.slumber);
+  return this.slumber = api(this.options.base_url);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  module.exports.ApiBase = (function() {
+function ApiBase(options) {
+  this.options = options;
+  this.init = bind(this.init, this);
+  this.handleOptions = bind(this.handleOptions, this);
+  this.handleOptions();
+  this.<span class="apidocCodeKeywordSpan">init</span>();
+  debug("constructor()");
+}
+
+ApiBase.prototype.handleOptions = function() {
+  var base;
+  if ((base = this.options).verbose == null) {
+    base.verbose = false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.__super__.patch" id="apidoc.element.gitlab.ApiV3.__super__.patch">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>patch
+        <span class="apidocSignatureSpan">(path, data, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patch = function (path, data, fn) {
+  var opts;
+  if (data == null) {
+    data = {};
+  }
+  if (fn == null) {
+    fn = null;
+  }
+  opts = this.prepare_opts(data);
+  return this.slumber(path).patch(opts, this.fn_wrapper(fn));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      if (data == null) {
+        data = {};
+      }
+      if (fn == null) {
+        fn = null;
+      }
+      opts = this.prepare_opts(data);
+      return this.slumber(path).<span class="apidocCodeKeywordSpan">patch</span>(opts, this.fn_wrapper(fn));
+    };
+
+    return ApiBaseHTTP;
+
+  })(ApiBase);
+
+}).call(this);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.__super__.post" id="apidoc.element.gitlab.ApiV3.__super__.post">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>post
+        <span class="apidocSignatureSpan">(path, data, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (path, data, fn) {
+  var opts;
+  if (data == null) {
+    data = {};
+  }
+  if (fn == null) {
+    fn = null;
+  }
+  opts = this.prepare_opts(data);
+  return this.slumber(path).post(opts, this.fn_wrapper(fn));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (data == null) {
+    data = {};
+  }
+  if (fn == null) {
+    fn = null;
+  }
+  opts = this.prepare_opts(data);
+  return this.slumber(path).<span class="apidocCodeKeywordSpan">post</span>(opts, this.fn_wrapper(fn));
+};
+
+ApiBaseHTTP.prototype.put = function(path, data, fn) {
+  var opts;
+  if (data == null) {
+    data = {};
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.__super__.prepare_opts" id="apidoc.element.gitlab.ApiV3.__super__.prepare_opts">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>prepare_opts
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prepare_opts = function (opts) {
+  if (opts.__query == null) {
+    opts.__query = {};
+  }
+  if (this.options.token) {
+    opts.headers = {
+      'PRIVATE-TOKEN': this.options.token
+    };
+  } else {
+    opts.headers = {
+      'Authorization': 'Bearer ' + this.options.oauth_token
+    };
+  }
+  return opts;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (fn == null) {
+    fn = null;
+  }
+  if ('function' === typeof query) {
+    fn = query;
+    query = {};
+  }
+  opts = this.<span class="apidocCodeKeywordSpan">prepare_opts</span>(query);
+  return this.slumber(path).get(opts, this.fn_wrapper(fn));
+};
+
+ApiBaseHTTP.prototype["delete"] = function(path, fn) {
+  var opts;
+  if (fn == null) {
+    fn = null;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.__super__.put" id="apidoc.element.gitlab.ApiV3.__super__.put">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.__super__.</span>put
+        <span class="apidocSignatureSpan">(path, data, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">put = function (path, data, fn) {
+  var opts;
+  if (data == null) {
+    data = {};
+  }
+  if (fn == null) {
+    fn = null;
+  }
+  opts = this.prepare_opts(data);
+  return this.slumber(path).put(opts, this.fn_wrapper(fn));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (data == null) {
+    data = {};
+  }
+  if (fn == null) {
+    fn = null;
+  }
+  opts = this.prepare_opts(data);
+  return this.slumber(path).<span class="apidocCodeKeywordSpan">put</span>(opts, this.fn_wrapper(fn));
+};
+
+ApiBaseHTTP.prototype.patch = function(path, data, fn) {
+  var opts;
+  if (data == null) {
+    data = {};
+  }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitlab.ApiV3.prototype" id="apidoc.module.gitlab.ApiV3.prototype">module gitlab.ApiV3.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.prototype.constructor" id="apidoc.element.gitlab.ApiV3.prototype.constructor">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApiV3() {
+  this.handleOptions = bind(this.handleOptions, this);
+  return ApiV3.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.ApiV3.prototype.handleOptions" id="apidoc.element.gitlab.ApiV3.prototype.handleOptions">
+        function <span class="apidocSignatureSpan">gitlab.ApiV3.prototype.</span>handleOptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handleOptions = function () {
+  ApiV3.__super__.handleOptions.apply(this, arguments);
+  this.options.base_url = 'api/v3';
+  return debug("handleOptions()");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  debug = require('debug')('gitlab:ApiBase');
+
+  module.exports.ApiBase = (function() {
+function ApiBase(options) {
+  this.options = options;
+  this.init = bind(this.init, this);
+  this.handleOptions = bind(this.handleOptions, this);
+  this.<span class="apidocCodeKeywordSpan">handleOptions</span>();
+  this.init();
+  debug("constructor()");
+}
+
+ApiBase.prototype.handleOptions = function() {
+  var base;
+  if ((base = this.options).verbose == null) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitlab.BaseModel" id="apidoc.module.gitlab.BaseModel">module gitlab.BaseModel</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.BaseModel.BaseModel" id="apidoc.element.gitlab.BaseModel.BaseModel">
+        function <span class="apidocSignatureSpan">gitlab.</span>BaseModel
+        <span class="apidocSignatureSpan">(client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function exports(client) {
+  this.client = client;
+  this._init = bind(this._init, this);
+  this.load = bind(this.load, this);
+  this._init();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitlab.BaseModel.prototype" id="apidoc.module.gitlab.BaseModel.prototype">module gitlab.BaseModel.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.BaseModel.prototype._init" id="apidoc.element.gitlab.BaseModel.prototype._init">
+        function <span class="apidocSignatureSpan">gitlab.BaseModel.prototype.</span>_init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_init = function () {
+  this.debug = require('debug')("gitlab:Models:" + this.constructor.name);
+  this.get = this.client.get;
+  this.post = this.client.post;
+  this.put = this.client.put;
+  this["delete"] = this.client["delete"];
+  if (this.init != null) {
+    return this.init();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  debug = require('debug')('gitlab:BaseModel');
+
+  module.exports = (function() {
+function exports(client) {
+  this.client = client;
+  this._init = bind(this._init, this);
+  this.load = bind(this.load, this);
+  this.<span class="apidocCodeKeywordSpan">_init</span>();
+}
+
+exports.prototype.load = function(model) {
+  return require("./Models/" + model)(this.client);
+};
+
+exports.prototype._init = function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.BaseModel.prototype.load" id="apidoc.element.gitlab.BaseModel.prototype.load">
+        function <span class="apidocSignatureSpan">gitlab.BaseModel.prototype.</span>load
+        <span class="apidocSignatureSpan">(model)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (model) {
+  return require("./Models/" + model)(this.client);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function ProjectIssues() {
+  this.list = bind(this.list, this);
+  this.init = bind(this.init, this);
+  return ProjectIssues.__super__.constructor.apply(this, arguments);
+}
+
+ProjectIssues.prototype.init = function() {
+  return this.notes = this.<span class="apidocCodeKeywordSpan">load</span>('IssueNotes');
+};
+
+ProjectIssues.prototype.list = function(projectId, params, fn) {
+  if (params == null) {
+    params = {};
+  }
+  if (fn == null) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitlab.Utils" id="apidoc.module.gitlab.Utils">module gitlab.Utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.Utils.Utils" id="apidoc.element.gitlab.Utils.Utils">
+        function <span class="apidocSignatureSpan">gitlab.</span>Utils
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Utils() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitlab.Utils.parseProjectId" id="apidoc.element.gitlab.Utils.parseProjectId">
+        function <span class="apidocSignatureSpan">gitlab.Utils.</span>parseProjectId
+        <span class="apidocSignatureSpan">(projectId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseProjectId = function (projectId) {
+  if (typeof projectId === "number") {
+    return projectId;
+  } else if (projectId.indexOf("/") !== -1) {
+    return projectId = encodeURIComponent(projectId);
+  } else {
+    return projectId = parseInt(projectId);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (fn) {
+      return fn(data);
+    }
+  } else if (retData.length === params.per_page) {
+    _this.debug("Recurse IssueNotes::all()");
+    data = data.concat(retData);
+    params.page++;
+    return _this.get("projects/" + (Utils.<span class="apidocCodeKeywordSpan">parseProjectId</span>(projectId)) + "
+;/issues/" + (parseInt(issueId)) + "/notes", params, cb);
+  } else {
+    data = data.concat(retData);
+    if (fn) {
+      return fn(data);
+    }
+  }
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
